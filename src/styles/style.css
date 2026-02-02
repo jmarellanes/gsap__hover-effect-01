@@ -95,17 +95,24 @@ body::-webkit-scrollbar {
 }
 
 .project-preview {
-  background-color: #222;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  block-size: 400px;
-  inline-size: 0;
+  position: fixed;
   inset-block-start: 12%;
   inset-inline-start: 50%;
-  overflow: hidden;
-  position: fixed;
   transform: translateX(-50%);
+  inline-size: 0;
+  block-size: 400px;
+  overflow: hidden;
+  background-color: #222;
+}
+
+.project-preview img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 @media (width <= 1120px) {
