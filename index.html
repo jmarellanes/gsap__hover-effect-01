@@ -2,13 +2,68 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>starter__vanilla</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="harrnish" />
+    <title>Hover effect using GSAP • Codegrid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <script defer src="src/scripts/main.js" type="module"></script>
   </head>
+
   <body>
-    <div id="app"></div>
-    <p>Hello!!</p>
-    <script type="module" src="/src/scripts/main.js"></script>
+    <div class="navigation-wrapper">
+      <div class="project-preview-wrapper">
+        <div class="project-preview"></div>
+      </div>
+
+      <ul class="navigation-list">
+        <li class="navigation-item">
+          <a class="navigation-link navigation-link-1" href="/services">
+            <span data-text="Services">Services</span>
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link navigation-link-2" href="/work">
+            <span data-text="Case Studies">Case Studies</span>
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link navigation-link-3" href="/process">
+            <span data-text="Process">Process</span>
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link navigation-link-4" href="/pricing">
+            <span data-text="Pricing">Pricing</span>
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link navigation-link-5" href="/team">
+            <span data-text="Team">Team</span>
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link navigation-link-6" href="/blog">
+            <span data-text="Insights">Insights</span>
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link navigation-link-7" href="/careers">
+            <span data-text="Careers">Careers</span>
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link navigation-link-8" href="/contact">
+            <span data-text="Contact">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="progressbar"></div>
   </body>
 </html>
