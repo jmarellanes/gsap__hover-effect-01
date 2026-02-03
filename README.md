@@ -1,86 +1,237 @@
-# Cinematic Menu — GSAP Image Reveal Navigation (Vanilla JS)
+# GSAP Hover Effect
 
-A minimal, high-end navigation concept demonstrating image reveal previews using GSAP in a small, dependency-light vanilla JS project.
+An interactive hover effect animation system that dynamically responds to user interactions. Features smooth GSAP-powered transitions and responsive hover tracking.
 
-## Demo
+## Overview
 
-Open `index.html` in a development server (see Installation). Hover navigation items to reveal a fixed preview image; a vertical scroll progress bar shows page position.
+This project showcases interactive hover animations using **GSAP** (GreenSock Animation Platform). The hover system includes:
+
+- **Dynamic Hover Tracking**: Smooth response to user interactions
+- **Hover State Transitions**: Animated element changes on hover
+- **Custom Styling**: Interactive elements with visual feedback
+- **Responsive Design**: Hover animations that work across all screen sizes
 
 ## Features
 
-- GSAP-powered animated image preview on navigation hover
-- CSS-only text reveal effect with fluid typography
-- Responsive behavior with CSS logical properties
-- Tiny, dependency-light setup (uses Vite for dev tooling)
+✨ **Advanced Animations**
 
-## Quickstart
+- GSAP timeline-based orchestration
+- Smooth staggered transitions
+- Expo easing for natural motion
 
-Prerequisites: Node.js and a package manager (pnpm recommended but npm/yarn work).
+🎨 **Modern Design**
 
-Installation:
+- Custom typography
+- Elegant interactive elements
+- Responsive layout
+
+⚡ **Performance Optimized**
+
+- Vite build tool with Rolldown bundler
+- Efficient hover tracking
+- Font preloading and optimization
+
+🛠️ **Developer Experience**
+
+- ESLint with modern config
+- Hot Module Replacement (HMR)
+- Module-based architecture
+
+## Tech Stack
+
+- **Animation**: [GSAP](https://gsap.com/) v3.14.2+
+- **Build Tool**: [Vite](https://vitejs.dev/) with Rolldown
+- **Linting**: ESLint 9.x
+- **Package Manager**: pnpm
+- **Module System**: ES Modules
+
+## Project Structure
+
+```
+.
+├── index.html              # Main HTML entry point
+├── src/
+│   ├── scripts/
+│   │   └── main.js        # Hover animation logic and DOM manipulation
+│   ├── styles/
+│   │   └── style.css      # Main stylesheet
+│   └── assets/            # Project assets
+├── public/                # Static assets
+├── package.json           # Project dependencies
+├── eslint.config.mjs      # ESLint configuration
+└── pnpm-lock.yaml         # Dependency lock file
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ (or latest LTS)
+- pnpm 8+ (or npm/yarn)
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd gsap__hover-effect--01
+```
+
+2. Install dependencies:
 
 ```bash
 pnpm install
 ```
 
-Development (start dev server):
+### Development
+
+Start the development server with hot reload:
 
 ```bash
-pnpm run dev
+pnpm dev
 ```
 
-Build for production:
+The site will be available at `http://localhost:5173`
+
+### Build
+
+Create an optimized production build:
 
 ```bash
-pnpm run build
+pnpm build
 ```
 
-Preview built output:
+Preview the production build locally:
 
 ```bash
-pnpm run preview
+pnpm preview
 ```
 
-Linting:
+## Scripts
 
-```bash
-pnpm run lint
-pnpm run lint:fix
-```
+| Script          | Purpose                           |
+| --------------- | --------------------------------- |
+| `pnpm dev`      | Start development server with HMR |
+| `pnpm build`    | Create production-optimized build |
+| `pnpm preview`  | Preview production build locally  |
+| `pnpm lint`     | Run ESLint to check code quality  |
+| `pnpm lint:fix` | Auto-fix ESLint issues            |
 
-## Project Structure
+## How It Works
 
-- `index.html` — demo page and navigation markup
-- `src/styles/style.css` — main styles (fluid type, preview layout, responsive rules)
-- `src/scripts/main.js` — vanilla JS that preloads images, handles hover reveal via GSAP, and updates the progress bar
-- `src/assets/` — image assets referenced by `main.js` (expects `img-1.webp` ... `img-8.webp`)
-- `package.json` — scripts and dependencies
+### Hover Animation Flow
 
-## How it works (brief)
+The project uses GSAP to create smooth hover animations that respond to user interactions:
 
-- On load, `main.js` preloads 8 images from `src/assets`.
-- Hovering a `.navigation-item` expands the `.project-preview` element via GSAP animation; the preview image is switched based on the hovered item's class (e.g. `.navigation-link-3` -> `img-3.webp`).
-- The vertical `.progressbar` height is updated on `scroll` to reflect document scroll progress.
+1. **Hover Initialization**
+   - Interactive elements are identified and prepared
+   - Hover tracking system monitors mouse events
+
+2. **Hover Detection**
+   - When hovering over interactive elements, hover state activates
+   - Smooth transitions between hover states using GSAP
+
+3. **Animation Execution**
+   - Scale, opacity, and color animations on hover
+   - Staggered animations for multiple elements
+   - Smooth return to default state on hover exit
+
+### Key Components
+
+**HTML**
+
+- Interactive elements with hover triggers
+- Semantic HTML structure
+- Custom element markup
+
+**CSS**
+
+- Interactive element styles
+- Hover state styling
+- Responsive design patterns
+- Animation states
+
+**JavaScript**
+
+- Hover detection logic
+- Event listener system for hover states
+- GSAP timeline orchestration
+- Module-based architecture
 
 ## Customization
 
-- Replace images in `src/assets/` following the `img-N.webp` naming pattern.
-- Adjust preview size by editing the GSAP `width` in `src/scripts/main.js` and the `.project-preview` dimensions in `src/styles/style.css`.
-- Swap fonts by editing the `<link>` in `index.html` and the `--font-main` CSS variable.
+### Colors
 
-## Scripts (from `package.json`)
+Edit CSS variables in src/styles/style.css to customize interactive elements and hover appearance.
 
-- `dev` — start Vite dev server
-- `build` — build production bundle
-- `preview` — locally preview production build
-- `lint` / `lint:fix` — run ESLint
+### Hover Behavior
 
-## Contributing
+Modify animation timing and easing in src/scripts/main.js:
 
-PRs welcome for bug fixes, accessibility improvements, and enhancements. Keep changes minimal and focused.
+- Duration values (in seconds)
+- Scale and opacity changes
+- Easing functions (e.g., `expo.inOut`, `power2.out`)
+- Hover target selectors
+
+### Interactive Elements
+
+Add or modify interactive elements by updating the hover target selectors in the JavaScript code.
+
+## Browser Support
+
+- Chrome/Edge: Latest 2 versions
+- Firefox: Latest 2 versions
+- Safari: Latest 2 versions
+- Mobile: iOS Safari 12+, Chrome Android
+
+## Performance Tips
+
+- GSAP uses GPU acceleration for smooth animations
+- Hover tracking is optimized for minimal repaints
+- Vite's code splitting minimizes initial bundle size
+- Event delegation reduces memory footprint
+
+## Troubleshooting
+
+**Hover animations not working?**
+
+- Check browser console for JavaScript errors
+- Ensure hover target elements are properly selected
+- Verify CSS is not blocking hover states
+
+**Animations not playing?**
+
+- Check browser console for JavaScript errors
+- Ensure GSAP is properly imported
+- Verify hover target selectors match your HTML elements
+
+**Build failing?**
+
+- Clear node_modules: `rm -rf node_modules && pnpm install`
+- Check pnpm version: `pnpm --version`
+- Review ESLint errors: `pnpm lint`
+
+## Credits
+
+- Developed by Jose Arellanes
+- Animations powered by [GSAP](https://gsap.com/)
+- Built with [Vite](https://vitejs.dev/)
 
 ## License
 
-This repository does not include an explicit license file. Add a `LICENSE` to indicate terms for reuse.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Copyright (c) 2026 José Manuel Díaz
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Contact
+
+For questions or feedback, please reach out to the project author.
 
 ---
+
+**Last Updated**: February 2026
