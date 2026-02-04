@@ -74,7 +74,7 @@ This project showcases interactive hover animations using **GSAP** (GreenSock An
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/jmarellanes/gsap__hover-effect-01.git
 cd gsap__hover-effect--01
 ```
 
